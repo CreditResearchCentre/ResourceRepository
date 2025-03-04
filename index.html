@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Research Centre - Resources</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center; /* Ensures the text is centered */
+            font-size: 1.5rem;
+        }
+        /* Removed .header-logo references since logos are removed */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #C8102E;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            padding: 8px 12px;
+        }
+        nav a:hover {
+            background: white;
+            color: #C8102E;
+            border-radius: 4px;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .search-bar select, .search-bar button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background: #C8102E;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 10px 15px;
+        }
+        .search-bar button:hover {
+            background: #A50E26;
+        }
+        .resource {
+            background: #eef2f7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #C8102E;
+            border-radius: 5px;
+        }
+        .resource h2 {
+            color: #000000;
+            font-weight: bold;
+        }
+        .resource h3 {
+            font-weight: bold;
+            color: #444;
+        }
+        .resource a {
+            color: #C8102E;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        .footer-container {
+            background: #3D3D3D;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center the entire block */
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            text-align: center;  /* Center the contact information */
+            max-width: 400px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            background: #C8102E;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Centered Titles -->
+        <h1>Credit Research Centre</h1>
+        <h2>Resource Repository</h2>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Conference XIX</a>
+        <a href="#">Past Conferences</a>
+        <a href="#">Research</a>
+        <a href="#">Thought Leadership</a>
+        <a href="#">News</a>
+        <a href="#">MSc BIRA</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="container">
+        <div class="search-bar">
+            <select id="authorSelect">
+                <option value="">Author</option>
+                <option value="denis_burakov">Denis Burakov</option>
+            </select>
+            <select id="topicSelect">
+                <option value="">Topic</option>
+                <option value="gradient_boosting">Gradient Boosting</option>
+            </select>
+            <button onclick="showResources()">Search</button>
+        </div>
+        <div class="disclaimer">
+            * The Credit Research Centre is not responsible for the content, accuracy, or reliability of these third-party resources.
+        </div>
+        <div id="resources">
+            <div class="resource">
+                <h2>Gradient Boosting</h2>
+                <h3>Denis Burakov</h3>
+                <p><a href="https://github.com/deburky/boosting-scorecards">Scorecard Boosting Notebooks</a></p>
+                <p><a href="https://github.com/xRiskLab/xBooster">Scorecard Boosting Package (xbooster)</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Credit Research Centre</p>
+            <p>University of Edinburgh Business School</p>
+            <p>29 Buccleuch Place</p>
+            <p>Edinburgh, EH8 9JS</p>
+            <p>credit.research.centre@ed.ac.uk</p>
+            <!-- LinkedIn link added below the contact info -->
+            <p><a href="https://www.linkedin.com/company/uebs-credit-research-centre/" target="_blank">
+                LinkedIn
+            </a></p>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a href="#">Business School</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Freedom of Information</a>
+        <a href="#">Privacy & Cookies</a>
+        <a href="#">Website Accessibility</a>
+    </div>
+
+    <div class="copyright">
+        &copy; 2024 Credit Research Centre, University of Edinburgh Business School
+    </div>
+
+    <!-- Example script stub, update or remove as needed -->
+    <script>
+        function showResources() {
+            // Your existing resource display logic
+            alert("Search functionality goes here.");
+        }
+    </script>
+</body>
+</html>
