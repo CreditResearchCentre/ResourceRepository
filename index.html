@@ -1,209 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Research Centre - Resources</title>
+    <link rel="stylesheet" href="Css/base.css">
+    <link rel="stylesheet" href="Css/crc-priority.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: #000000;
-            color: white;
-            padding: 20px;
-            text-align: center; /* Ensures the text is centered */
-            font-size: 1.5rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #C8102E;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            padding: 8px 12px;
-        }
-        nav a:hover {
-            background: white;
-            color: #C8102E;
-            border-radius: 4px;
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .search-bar select, .search-bar button {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .search-bar button {
-            background: #C8102E;
-            color: white;
-            cursor: pointer;
-            border: none;
-            padding: 10px 15px;
-        }
-        .search-bar button:hover {
-            background: #A50E26;
-        }
-        .resource {
-            background: #eef2f7;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid #C8102E;
-            border-radius: 5px;
-        }
-        .resource h2 {
-            color: #000000;
-            font-weight: bold;
-        }
-        .resource h3 {
-            font-weight: bold;
-            color: #444;
-        }
-        .resource a {
-            color: #C8102E;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .resource a:hover {
-            text-decoration: underline;
-        }
-        .footer-container {
-            background: #3D3D3D;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: center; /* Center the entire block */
-            flex-wrap: wrap;
-        }
-        .footer-section {
-            text-align: center;  /* Center the contact information */
-            max-width: 400px;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            background: #C8102E;
-            padding: 10px;
-            margin-top: 10px;
-        }
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        .copyright {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9rem;
-            margin-top: 0;
+        /* Force dropdown menus to align to the left when near the right edge */
+        .navbar-nav .dropdown-menu {
+            right: 0;
+            left: auto;
         }
     </style>
 </head>
+
 <body>
 
     <header>
+        <a href="https://www.business-school.ed.ac.uk/" target="_blank">
+            <img src="Logo/crc-logo.svg" alt="CRC Logo" class="header-logo">
+        </a>
+
+
         <h1>Credit Research Centre</h1>
         <h2>Resource Repository</h2>
     </header>
 
-    <!-- Updated nav with CRC links -->
-    <nav>
-        <a href="https://www.crc.business-school.ed.ac.uk/home">Home</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/conference-2025">Conference XIX</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/conferences/past-papers">Past Conferences</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/research">Research</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/thought-leadership">Thought Leadership</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/news">News</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/msc-banking-risk">MSc BIRA</a>
-        <a href="https://www.crc.business-school.ed.ac.uk/about">About</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-crc" role="navigation">
+        <div class="container-fluid px-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#crcNav"
+                aria-controls="crcNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="crcNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.crc.business-school.ed.ac.uk/home">Home</a></li>
+
+                    <!-- Conference XIX -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="confDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Conference XIX</a>
+                        <div class="dropdown-menu" aria-labelledby="confDropdown">
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025">Welcome</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/call-for-abstracts">Call
+                                for abstracts</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/pre-conference-workshops">Pre‑conference
+                                workshops</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/fees">Fees &
+                                registration</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/key-dates">Key dates</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/programme">Programme</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/keynote-speakers">Keynote
+                                speakers</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/sponsorship">Sponsors &
+                                exhibitors</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/venue-accommodation">Venue
+                                &
+                                accommodation</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/travel-and-things-to-do">Travel
+                                & things to
+                                do</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conference-2025/updates">Register for
+                                updates</a>
+                        </div>
+                    </li>
+
+                    <!-- Past conferences -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pastConf" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Past Conferences</a>
+                        <div class="dropdown-menu" aria-labelledby="pastConf">
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conferences/past-papers">Papers
+                                2005-2023</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/conferences/highlights">Conference
+                                highlights</a>
+                        </div>
+                    </li>
+
+                    <!-- Research -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="researchDD" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+                        <div class="dropdown-menu" aria-labelledby="researchDD">
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research/seminars">Seminars</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research">Publications & Projects</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research/working-papers">Working
+                                Papers</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research/phd-topics">PhD Topics</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research/visiting-scholars">Visiting
+                                Scholars</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/research/consultancy">Consultancy</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.crc.business-school.ed.ac.uk/thought-leadership">Thought Leadership</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.crc.business-school.ed.ac.uk/news">News</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.crc.business-school.ed.ac.uk/msc-banking-risk">MSc BIRA</a></li>
+
+                    <!-- About (active) -->
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDD" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">About</a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDD">
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/about">Background</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/about/members">Members</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/about/advisory-board">Research Advisory
+                                Board</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/about/external-affiliates">External
+                                Affiliates</a>
+                            <a class="dropdown-item"
+                                href="https://www.crc.business-school.ed.ac.uk/about/work-with-us">Work With Us</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
 
     <div class="container">
         <div class="search-bar">
             <select id="authorSelect">
                 <option value="">Author</option>
-                <option value="denis_burakov">Denis Burakov</option>
             </select>
             <select id="topicSelect">
                 <option value="">Topic</option>
-                <option value="gradient_boosting">Gradient Boosting</option>
             </select>
-            <button onclick="showResources()">Search</button>
+            <button onclick="filterContent()">Search</button>
         </div>
         <div class="disclaimer">
-            * The Credit Research Centre is not responsible for the content, accuracy, or reliability of these third-party resources.
+            * The Credit Research Centre is not responsible for the content, accuracy, or reliability of these
+            third-party resources.
         </div>
         <div id="resources">
-            <div class="resource">
-                <h2>Gradient Boosting</h2>
-                <h3>Denis Burakov</h3>
-                <p><a href="https://github.com/deburky/boosting-scorecards">Scorecard Boosting Notebooks</a></p>
-                <p><a href="https://github.com/xRiskLab/xBooster">Scorecard Boosting Package (xbooster)</a></p>
+            <div class="topic-block resource" data-topic="concentration_risk">
+                <h2>Topic: Concentration Risk</h2>
+                <div class="author-block" data-author="andrija_djurovic">
+
+                    <h3>Author: <a href="https://www.linkedin.com/in/andrija-djurovic">Andrija Djurovic</a></h3>
+
+                    <a href="https://github.com/andrija-djurovic/adsfcr/blob/main/model_dev_and_vld/hi_cv_testing.pdf">Testing
+                        the Concentration in the Rating Grades</a>
+                    <p>This set of slides outlines the basic metrics for measuring Concentration among PD risk grades,
+                        and the European regulatory requirements for reporting them. Andrija’s presentation gives
+                        helpful commentary and links to useful code – R and Python – to calculate these metrics. This
+                        should be read and explored by all students of quantitative risk management and by model
+                        managers, as an example of best practice and regulatory requirement for Credit Risk IRB.
+                    </p>
+
+                    <a href="https://github.com/andrija-djurovic/adsfcr/tree/main/concentration_risk">IMF’s Partial
+                        Portfolio</a>
+                    <p>This folder contains Andrija’s presentation summary of the IMF’s Partial Portfolio Approach to
+                        Concentration Risk, with illustrating data and code in R and Python. The IMF’s hybrid model of
+                        portfolio credit risk has a structure that maintains good performance even in the presence of
+                        high name-exposure concentrations, and therefore is an important model option and a mitigation
+                        of Centration Risk. This should be read by model developers and model risk managers as an
+                        example where model structure has mitigated a potential model error, so helping manage the
+                        specification risk of the model.
+                    </p>
+
+                    <div class="comments-block">
+                        <h4>Comments by Alan Forest</h4>
+                        <a href="Pdfs/CommentsConcentration.pdf" target="_blank">Read Comments
+                            (PDF)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-block resource" data-topic="gradient_boosting">
+                <h2>Topic: Gradient Boosting</h2>
+                <div class="author-block" data-author="denis_burakov">
+
+                    <h3>Author: <a
+                            href="https://www.crc.business-school.ed.ac.uk/about/external-affiliates#denis-burakov">Denis
+                            Burakov</a></h3>
+
+                    <a href="https://github.com/deburky/boosting-scorecards">Scorecard Boosting Notebooks</a>
+                    <p>This repository features a comprehensive collection of Jupyter Notebooks and Python scripts
+                        focused on scorecard boosting. It includes all relevant materials and developments by the
+                        original author, Paul Edwards, providing a detailed guide to the topic.</p>
+
+                    <a href="https://github.com/xRiskLab/xBooster">Scorecard Boosting Package (xbooster)</a>
+                    <p>This repository offers an open-source Python implementation of scorecard boosting tailored
+                        for credit risk modeling. The package facilitates the creation of interpretable scorecards
+                        using XGBoost logistic regression and includes tools designed for risk management
+                        explainability.</p>
+
+                    <a href="https://github.com/deburky/boosting-scorecards/tree/main/other_notebooks">Collection of
+                        Various Notebooks on Credit Scoring with Machine Learning</a>
+                    <p>This collection encompasses a wide range of topics within credit scoring, such as
+                        class-imbalance learning, machine learning fairness, and experiments with XGBoost using
+                        custom loss functions, alongside Naive Bayes scorecards.</p>
+
+                    <a href="https://xrisklab.ai/">Documentation of Boosted Scoring Package</a>
+                    <p>This document outlines the scorecard boosting package, detailing the key steps involved in
+                        constructing a scorecard from gradient boosted decision trees (GBDT). It also covers
+                        practical use cases, including handling categorical data and deploying a boosted scorecard
+                        with SQL.</p>
+                </div>
+            </div>
+
+            <div class="topic-block resource" data-topic="logistic_regression">
+                <h2>Topic: Logistic Regression / Neural Networks</h2>
+                <div class="author-block" data-author="denis_burakov">
+
+                    <h3>Author: <a
+                            href="https://www.crc.business-school.ed.ac.uk/about/external-affiliates#denis-burakov">Denis
+                            Burakov</a></h3>
+                    <a href="https://github.com/deburky/calibration/tree/main/loss-functions">Collection of Various
+                        Implementation of Algorithms</a>
+                    <p>This compilation includes various implementations of machine learning modelling techniques
+                        and optimization algorithms. It covers binary logistic regression (with methods such as
+                        stochastic gradient descent, Fisher scoring, weighted, and focal loss), multi-class
+                        classification using Softmax, and neural networks (including perceptrons).</p>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="footer-container">
         <div class="footer-section">
-            <h3>Contact</h3>
+            <p>Contact</p>
             <p>Credit Research Centre</p>
             <p>University of Edinburgh Business School</p>
             <p>29 Buccleuch Place</p>
             <p>Edinburgh, EH8 9JS</p>
-            <p>credit.research.centre@ed.ac.uk</p>
-            <p><a href="https://www.linkedin.com/company/uebs-credit-research-centre/" target="_blank">
-                LinkedIn
-            </a></p>
+            <p class="mb-3"><a href="mailto:credit.research.centre@ed.ac.uk">credit.research.centre@ed.ac.uk</a></p>
+        </div>
+
+        <div class="footer-connect">
+            <p>Connect with Us</p>
+            <a href="https://www.linkedin.com/company/uebs-credit-research-centre/" target="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+
+        <div class="footer-logo">
+            <a href="https://www.ed.ac.uk/" target="_blank">
+                <img src="Logo/UOE Logo.svg" alt="University of Edinburgh Logo" style="width: 300px;">
+            </a>
         </div>
     </div>
 
     <div class="footer-links">
-        <a href="#">Business School</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Freedom of Information</a>
-        <a href="#">Privacy & Cookies</a>
-        <a href="#">Website Accessibility</a>
+        <a href="https://www.business-school.ed.ac.uk/" rel="noreferrer" target="_blank">Business School</a>
+        <a href="https://www.business-school.ed.ac.uk/terms-and-conditions">Terms &amp; Conditions</a>
+        <a href="https://www.business-school.ed.ac.uk/freedom-of-information">Freedom of Information</a>
+        <a href="https://www.business-school.ed.ac.uk/privacy-policy">Privacy &amp; Cookies</a>
+        <a href="https://www.business-school.ed.ac.uk/accessibility">Website Accessibility</a>
     </div>
-
-    <div class="copyright">
-        &copy; 2024 Credit Research Centre, University of Edinburgh Business School
-    </div>
-
     <script>
-        function showResources() {
-            // Your existing resource display logic
-            alert("Search functionality goes here.");
+
+        function filterContent() {
+            const selectedAuthor = document.getElementById("authorSelect").value;
+            const selectedTopic = document.getElementById("topicSelect").value;
+
+            const resourceBlocks = document.querySelectorAll("#resources .topic-block.resource");
+
+            resourceBlocks.forEach(topicBlock => {
+                const topicMatch = !selectedTopic || topicBlock.dataset.topic === selectedTopic;
+
+                let showTopic = false;
+
+                const authorBlocks = topicBlock.querySelectorAll(".author-block");
+
+                if (authorBlocks.length > 0) {
+                    // Case: author nested under topic (like Denis Burakov in Gradient Boosting)
+                    authorBlocks.forEach(authorBlock => {
+                        const authorMatch = !selectedAuthor || authorBlock.dataset.author === selectedAuthor;
+                        const match = topicMatch && authorMatch;
+                        authorBlock.style.display = match ? "block" : "none";
+                        if (match) showTopic = true;
+                    });
+                } else {
+                    // Case: No author block inside (like Logistic Regression section)
+                    const topicOnlyMatch = topicMatch && !selectedAuthor;
+                    topicBlock.style.display = topicOnlyMatch ? "block" : "none";
+                    if (topicOnlyMatch) showTopic = true;
+                }
+
+                topicBlock.style.display = showTopic ? "block" : "none";
+            });
         }
+
+        function populateDropdowns() {
+            const authorSelect = document.getElementById("authorSelect");
+            const topicSelect = document.getElementById("topicSelect");
+            const authorSet = new Set();
+            const topicSet = new Set();
+
+            document.querySelectorAll(".author-block").forEach(author => {
+                const authorId = author.dataset.author;
+                if (authorId) authorSet.add(authorId);
+            });
+
+            document.querySelectorAll(".topic-block.resource").forEach(topic => {
+                const topicId = topic.dataset.topic;
+                if (topicId) topicSet.add(topicId);
+            });
+
+            authorSet.forEach(author => {
+                const option = document.createElement("option");
+                option.value = author;
+                option.textContent = author.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                authorSelect.appendChild(option);
+            });
+
+            topicSet.forEach(topic => {
+                const option = document.createElement("option");
+                option.value = topic;
+                option.textContent = topic.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                topicSelect.appendChild(option);
+            });
+        }
+
+        window.onload = populateDropdowns;
+
     </script>
+    <!-- Include these right before the closing </body> tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,65 @@
+:root {
+    --crc-red: #d50032;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: Arial, sans‑serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------- Navigation ---------- */
+.navbar-crc {
+    background: var(--crc-red);
+}
+
+.navbar-crc .nav-link,
+.navbar-crc .dropdown-toggle {
+    color: #fff !important;
+    font-size: 0.95rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Hover / active */
+.navbar-crc .nav-link:hover,
+.navbar-crc .dropdown-toggle:hover,
+.navbar-crc .dropdown-item:hover {
+    background: #f0f0f0 !important;
+    color: var(--crc-red) !important;
+}
+
+/* Dropdown menu */
+.navbar-crc .dropdown-menu {
+    background: var(--crc-red);
+    border: none;
+}
+
+.navbar-crc .dropdown-item {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+}
+
+/* ---------- Content cards ---------- */
+.container-main {
+    max-width: 80%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer-links {
+    background: var(--crc-red);
+}
