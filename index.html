@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <title>Credit Research Centre - Resources</title>
+    <link rel="stylesheet" href="Css/Mobile.css">
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="Css/crc-priority.css">
     <style>
@@ -13,6 +15,30 @@
         .navbar-nav .dropdown-menu {
             right: 0;
             left: auto;
+        }
+
+        header {
+            text-align: center;
+            /* Center everything on mobile */
+            padding: 10px;
+        }
+
+        header img {
+            max-width: 120px;
+            /* Keeps logo nicely scaled */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 5px 0;
+        }
+
+        header h2 {
+            margin: 0;
+            color: #666;
+            /* Subtle text-muted effect */
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -24,10 +50,11 @@
             <img src="Logo/crc-logo.svg" alt="CRC Logo" class="header-logo">
         </a>
 
-
         <h1>Credit Research Centre</h1>
         <h2>Resource Repository</h2>
     </header>
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-crc" role="navigation">
         <div class="container-fluid px-0">
@@ -303,7 +330,8 @@
         <div class="footer-connect">
             <p>Connect with Us</p>
             <a href="https://www.linkedin.com/company/uebs-credit-research-centre/" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
+                    style="width:32px;height:32px">
             </a>
         </div>
 
