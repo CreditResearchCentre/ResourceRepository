@@ -11,47 +11,85 @@
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="Css/crc-priority.css">
     <style>
-        /* Force dropdown menus to align to the left when near the right edge */
-        .navbar-nav .dropdown-menu {
-            right: 0;
-            left: auto;
+        /* Header base */
+        .crc-header {
+            background: #000;
+            color: #fff;
+            padding: 20px 10px;
         }
 
-        header {
+        /* Mobile first: stack vertically */
+        .crc-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            /* Center everything on mobile */
-            padding: 10px;
+            gap: 10px;
         }
 
-        header img {
-            max-width: 120px;
-            /* Keeps logo nicely scaled */
+        .crc-logo {
+            max-width: 160px;
             height: auto;
-            margin-bottom: 10px;
         }
 
-        header h1 {
-            margin: 5px 0;
+        .crc-titles h1 {
+            margin: 5px 0 2px;
+            font-size: 1.4rem;
+            font-weight: 700;
         }
 
-        header h2 {
+        .crc-titles h2 {
             margin: 0;
-            color: #666;
-            /* Subtle text-muted effect */
-            font-size: 1.2rem;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Desktop layout */
+        @media (min-width: 992px) {
+            .crc-wrap {
+                flex-direction: row;
+                justify-content: space-between;
+                /* logo left, titles center */
+                align-items: center;
+                position: relative;
+            }
+
+            .crc-logo {
+                max-width: 200px;
+            }
+
+            /* Center titles absolutely */
+            .crc-titles {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+
+            .crc-titles h1 {
+                font-size: 2rem;
+            }
+
+            .crc-titles h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <a href="https://www.business-school.ed.ac.uk/" target="_blank">
-            <img src="Logo/crc-logo.svg" alt="CRC Logo" class="header-logo">
-        </a>
+    <header class="crc-header">
+        <div class="crc-wrap">
+            <a class="crc-logo-link" href="https://www.business-school.ed.ac.uk/" target="_blank" rel="noreferrer">
+                <img src="Logo/crc-logo.svg" alt="CRC Logo" class="crc-logo">
+            </a>
 
-        <h1>Credit Research Centre</h1>
-        <h2>Resource Repository</h2>
+            <div class="crc-titles">
+                <h1>Credit Research Centre</h1>
+                <h2>Resource Repository</h2>
+            </div>
+        </div>
     </header>
 
 
